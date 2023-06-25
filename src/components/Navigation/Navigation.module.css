@@ -4,8 +4,15 @@
   padding: 12px;
   font-weight: 700;
   color: #2a363b;
+
+  transition: scale 250ms linear, color 250ms linear;
 }
 
 .link.active {
-  color: #e84a5f;
+  color: blue;
+}
+.link:hover,
+.link:focus {
+  color: blue;
+  scale: 1.1;
 }

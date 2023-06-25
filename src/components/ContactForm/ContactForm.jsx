@@ -16,15 +16,16 @@ export default function ContactForm() {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
+    // name & number прописані на бекенд
     const name = e.target.name.value;
-    const phone = e.target.phone.value;
+    const number = e.target.phone.value;
 
     if (contacts.find(contact => contact.name === name)) {
       Notify.warning(`${name} is already in contacts`);
       return;
     }
 
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
 
     form.reset();
   };

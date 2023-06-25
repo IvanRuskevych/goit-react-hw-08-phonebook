@@ -16,9 +16,8 @@ function Contact({ item }) {
     <li className={css.item}>
       <div className={css.wrap}>
         <p>{`${item.name} :`}</p>
-        <p className={css.text}>{`${item.phone}`}</p>
+        <p className={css.text}>{`${item.number}`}</p>
       </div>
-      {/* {`${item.name}: ${item.phone}`} */}
       <Button
         size="small"
         type="submit"
@@ -35,7 +34,7 @@ function Contact({ item }) {
 Contact.propTypes = {
   item: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
   }),
 };
