@@ -4,11 +4,13 @@ import { nanoid } from 'nanoid';
 import { selectFilteredContacts } from 'redux/selectors';
 import Contact from 'components/Contact/Contact';
 
+import css from './ContactsList.module.css';
+
 function ContactsList() {
   const list = useSelector(selectFilteredContacts);
 
   return (
-    <ul>
+    <ul className={css.list}>
       {list.map(contact => {
         return <Contact item={contact} key={nanoid(5)} />;
       })}
