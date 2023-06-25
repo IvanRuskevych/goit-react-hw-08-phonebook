@@ -14,7 +14,11 @@ function Contact({ item }) {
 
   return (
     <li className={css.item}>
-      {`${item.name}: ${item.phone}`}
+      <div className={css.wrap}>
+        <p>{`${item.name} :`}</p>
+        <p className={css.text}>{`${item.phone}`}</p>
+      </div>
+      {/* {`${item.name}: ${item.phone}`} */}
       <Button
         size="small"
         type="submit"
